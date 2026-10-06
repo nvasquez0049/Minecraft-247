@@ -2,7 +2,7 @@ const mineflayer = require('mineflayer');
 
 function createBot() {
     const bot = mineflayer.createBot({
-        host: 'Gru-PoMeccos.aternos.me:36977', // <--- REEMPLAZA ESTO POR LA IP DE TU SERVER
+        host: 'Gru-PoMeccos.aternos.me', // <--- REEMPLAZA ESTO POR LA IP DE TU SERVER
         port: 36977,                // Puerto predeterminado de Minecraft
         username: 'Rabitt_356',    // Nombre genérico del bot/NPC dentro del juego
         version: false              // Autodetecta la versión exacta del servidor (1.8 a 1.21+)
@@ -11,7 +11,6 @@ function createBot() {
     bot.on('spawn', () => {
         console.log(`[NPC] El bot ha aparecido correctamente en el mapa.`);
         // Si tu servidor No-Premium requiere contraseña, descomenta la línea de abajo:
-        // setTimeout(() => bot.chat('/login erickJKN'), 4000);
     });
 
     bot.on('login', () => {
